@@ -1,0 +1,12 @@
+import Foundation
+
+//https://www.hackerrank.com/challenges/save-the-prisoner/problem?h_r=profile
+
+func saveThePrisoner(n: Int, m: Int, s: Int) -> Int {
+    if (m + s - 1) % n == 0 {
+        return n
+    } else {
+        return (m + s - 1) % n
+    }
+   
+    }
