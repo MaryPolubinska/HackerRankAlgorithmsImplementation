@@ -1,0 +1,25 @@
+import Foundation
+
+//https://www.hackerrank.com/challenges/kmp-problem?h_r=profile
+
+func kmp(x: [Int]) -> String {
+var result = ""
+var letters = "abcdefghigklmnopqrstuvwxyz"
+var k = 0
+for i in 0...x.count - 1 {
+    k += x[i]
+}
+if k > 0 && k <= 1000000 {
+
+for j in 0...x.count - 1{
+   let repeats = x[j]
+    if repeats != 0 {
+    for _ in 1...repeats {
+        let letter = letters[letters.index(letters.startIndex, offsetBy: j)]
+        result.append(letter)
+    }
+  }
+}
+}
+return result
+}
