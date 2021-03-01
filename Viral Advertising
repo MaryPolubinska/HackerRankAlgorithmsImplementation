@@ -1,0 +1,25 @@
+import Foundation
+
+/*
+
+https://www.hackerrank.com/challenges/strange-advertising/problem?h_r=profile
+
+*/
+
+func viralAdvertising(n: Int) -> Int {
+    var recipients = 5
+    var cumulativeLikes = 2
+    var likes = 2
+ 
+   if n == 1 {
+       cumulativeLikes = 2
+   } else if n >= 2 && n <= 50 {
+    for i in 2...n {
+        recipients = Int((recipients / 2)) * 3
+        likes = Int(recipients / 2)
+        cumulativeLikes = likes + cumulativeLikes
+        print(cumulativeLikes)
+    }
+    }
+ return cumulativeLikes
+}
