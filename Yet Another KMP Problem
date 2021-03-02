@@ -1,6 +1,23 @@
 import Foundation
 
-//https://www.hackerrank.com/challenges/kmp-problem?h_r=profile
+/*
+https://www.hackerrank.com/challenges/kmp-problem?h_r=profile
+
+Given a sequence x1, x2, x3...x26, construct a string,S , that meets the following conditions:
+
+The frequency of letter 'a' in S is exactly x1, the frequency of letter 'b' in S is exactly x2, and so on.
+Let's assume characters of S are numbered from 1 to N, where sum of all xi is equal to N. 
+We apply the KMP algorithm to S and get a table,kmp , of size N. You must ensure that the sum of kmp[i] for all i is minimal.
+If there are multiple strings which fulfill the above conditions, print the lexicographically smallest one.
+
+Input Format
+
+A single line containing 26 space-separated integers describing sequence x.
+
+Output Format
+
+Print a single string denoting S.
+*/
 
 func kmp(x: [Int]) -> String {
 var result = ""
