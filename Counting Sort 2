@@ -1,0 +1,8 @@
+import Foundation
+
+//https://www.hackerrank.com/challenges/countingsort2/problem
+
+func countingSort(arr: [Int]) -> [Int] {
+    var array = arr
+return array.sorted()
+}
