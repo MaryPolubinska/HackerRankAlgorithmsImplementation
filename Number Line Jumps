@@ -1,0 +1,14 @@
+import Foundation
+
+//https://www.hackerrank.com/challenges/kangaroo/problem?h_r=profile
+
+func kangaroo(x1: Int, v1: Int, x2: Int, v2: Int) -> String {
+    var res = ""
+
+    if (x2 - x1) * (v2 - v1) < 0 && (x2 - x1) % (v2 - v1) == 0 {
+        res = "YES"
+    } else {
+        res = "NO"
+    }
+return res
+}
