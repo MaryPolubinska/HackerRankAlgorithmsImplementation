@@ -1,0 +1,18 @@
+import Foundation
+
+//https://www.hackerrank.com/challenges/grading/problem?h_r=profile
+
+func gradingStudents(grades: [Int]) -> [Int] {
+    var res = [Int]()
+    for i in 0...grades.count - 1 {
+        let nearestFives = (grades[i] + 4) / 5 * 5
+        if grades[i] < 38 || grades[i] % 5 == 0 {
+            res.append(grades[i])
+        } else if nearestFives - grades[i] < 3 {
+            res.append(nearestFives)
+        } else if nearestFives - grades[i] >= 3 {
+            res.append(grades[i])
+        }
+    }
+return res
+}
