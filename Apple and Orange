@@ -1,0 +1,28 @@
+import Foundation
+
+//https://www.hackerrank.com/challenges/apple-and-orange/problem?h_r=profile
+
+func countApplesAndOranges(s: Int, t: Int, a: Int, b: Int, apples: [Int], oranges: [Int]) -> Void {
+var apples1 = [Int]()
+var oranges1 = [Int]()
+var app = 0
+var oran = 0
+for i in apples {
+    apples1.append(i + a)
+}
+for j in oranges {
+    oranges1.append(j + b)
+}
+for fruit1 in apples1 {
+    if fruit1 >= s && fruit1 <= t {
+        app += 1
+    }
+}
+    for fruit2 in oranges1 {
+        if fruit2 >= s && fruit2 <= t {
+            oran += 1
+        }
+    }
+    print(app)
+    print(oran)
+}
