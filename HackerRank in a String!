@@ -7,12 +7,12 @@ https://www.hackerrank.com/challenges/hackerrank-in-a-string/problem
 
 func hackerrankInString(s: String) -> String {
    let hackStr = "hackerrank"
-    var i = 0
+    var i = 1
     if s.count < hackStr.count || s.count > 10000 {
         return "NO"
     } else {
         for character1 in s {
-            if character1 == hackStr[hackStr.index(hackStr.startIndex, offsetBy: i)] && i < hackStr.count {
+            if character1 == hackStr[hackStr.index(hackStr.startIndex, offsetBy: i - 1)] && i < hackStr.count {
                 i += 1
             }
         }
