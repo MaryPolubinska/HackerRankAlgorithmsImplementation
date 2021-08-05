@@ -1,0 +1,21 @@
+Import Foundation
+
+/*
+https://www.hackerrank.com/challenges/hackerrank-in-a-string/problem
+
+*/
+
+func hackerrankInString(s: String) -> String {
+   let hackStr = "hackerrank"
+    var i = 0
+    if s.count < hackStr.count || s.count > 10000 {
+        return "NO"
+    } else {
+        for character1 in s {
+            if character1 == hackStr[hackStr.index(hackStr.startIndex, offsetBy: i)] && i < hackStr.count {
+                i += 1
+            }
+        }
+        return (i == hackStr.count ? "YES" : "NO")
+    }
+}
